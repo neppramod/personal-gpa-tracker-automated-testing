@@ -69,6 +69,8 @@ namespace PersonalGPATrackerTests
 #line 7
  testRunner.Given("I setup a course seed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
+ testRunner.And("check the course in the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 9
  testRunner.And("I navigate to the Course Edit page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
         }
@@ -80,49 +82,49 @@ namespace PersonalGPATrackerTests
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit a course", new string[] {
                         "Normal_Flow"});
-#line 11
+#line 12
 this.ScenarioSetup(scenarioInfo);
 #line 6
 this.FeatureBackground();
-#line 12
- testRunner.Given("I have entered CSCI3111 as the Code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 13
-  testRunner.And("I have entered Basic Web Design and Development as the Title", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Given("I have entered CSCI3111 as the Code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 14
-  testRunner.And("I have selected 6 as the Credit Hours", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I have entered Basic Web Design and Development as the Title", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 15
-  testRunner.And("I have selected A- as the Letter Grade", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I have selected 6 as the Credit Hours", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 16
- testRunner.When("I issue the Update Course command", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+  testRunner.And("I have selected A- as the Letter Grade", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 17
+ testRunner.When("I issue the Update Course command", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 18
  testRunner.Then("the page should go to home page and course updated in the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Go to add without updating a course")]
+        [NUnit.Framework.DescriptionAttribute("Go to home without updating a course")]
         [NUnit.Framework.CategoryAttribute("Alternative_Flow")]
-        public virtual void GoToAddWithoutUpdatingACourse()
+        public virtual void GoToHomeWithoutUpdatingACourse()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Go to add without updating a course", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Go to home without updating a course", new string[] {
                         "Alternative_Flow"});
-#line 20
+#line 21
 this.ScenarioSetup(scenarioInfo);
 #line 6
 this.FeatureBackground();
-#line 21
- testRunner.Given("I have entered CSCI3110 as the Code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 22
-  testRunner.And("I have entered Advanced Web Design and Development as the Title", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Given("I have entered CSCI3111 as the Code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 23
-  testRunner.And("I have selected 3 as the Credit Hours", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I have entered Basic Web Design and Development as the Title", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 24
-  testRunner.And("I have selected B- as the Letter Grade", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("I have selected 6 as the Credit Hours", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 25
- testRunner.When("I issue the Add Course menu command", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+  testRunner.And("I have selected A- as the Letter Grade", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 26
- testRunner.Then("the page should go to add course page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I issue the Back to Course List link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 27
+ testRunner.Then("the page should go to add course page without course updated in the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

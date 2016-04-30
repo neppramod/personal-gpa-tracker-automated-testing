@@ -78,7 +78,18 @@ namespace PersonalGPATrackerTests
             var courseListPageTitle = GPATrackerCoursePage.PageTitle;
             Assert.That(courseListPageTitle, Is.EqualTo("Course List and GPA - My ASP.NET Application"));
         }
-                      
+
+        [Then]
+        public void ThenThePageShouldGoToAddCoursePageWithoutCourseUpdatedInTheList()
+        {
+            var courseListPageTitle = GPATrackerCoursePage.PageTitle;
+            Assert.That(courseListPageTitle, Is.EqualTo("Course List and GPA - My ASP.NET Application"));
+
+            var previouslyAddedCourseCode = GPATrackerCoursePage.AddedCourseCode;
+            Assert.That(previouslyAddedCourseCode, Contains.Substring("CSCI3110"));
+        }
+
+
 
         [Given]
         public void GivenISetupACourseSeed()
@@ -109,6 +120,9 @@ namespace PersonalGPATrackerTests
         {
             var courseListPageTitle = GPATrackerCoursePage.PageTitle;
             Assert.That(courseListPageTitle, Is.EqualTo("Course List and GPA - My ASP.NET Application"));
+
+            var editedCourseCode = GPATrackerCoursePage.AddedCourseCode;
+            Assert.That(editedCourseCode, Contains.Substring("CSCI3111"));
         }
 
         [Given]
@@ -193,12 +207,14 @@ namespace PersonalGPATrackerTests
             GPATrackerCoursePage.IssueAddCourseMenuLink();
         }
 
+        /*
         [Then]
         public void ThenThePageShouldGoToAddCoursePage()
         {
             var courseAddPageTitle = GPATrackerCoursePage.PageTitle;
             Assert.That(courseAddPageTitle, Is.EqualTo("Add New Course - My ASP.NET Application"));
         }
+        */
 
         [When]
         public void WhenIIssueTheDeleteLink()

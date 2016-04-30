@@ -3,6 +3,10 @@ using PersonalGPATracker.TestingFramework;
 using System;
 using TechTalk.SpecFlow;
 
+/// <summary>
+/// Assumption: When counting rows in the list page, count value = 1 is considered empty (couseListRowsCount)
+/// (because first row contains the heading information of the table)
+/// </summary>
 namespace PersonalGPATrackerTests
 {
     [Binding]
@@ -62,9 +66,7 @@ namespace PersonalGPATrackerTests
             var courseListPageTitle = GPATrackerCoursePage.PageTitle;
             Assert.That(courseListPageTitle, Is.EqualTo("Course List and GPA - My ASP.NET Application"));
 
-            var couseListRowsCount = GPATrackerCoursePage.CourseListRowsCount;
-
-            // 1st row is used for table heading
+            var couseListRowsCount = GPATrackerCoursePage.CourseListRowsCount;            
             Assert.That(couseListRowsCount, Is.EqualTo(2));
 
             var addedCourseCode = GPATrackerCoursePage.AddedCourseCode;
@@ -175,8 +177,6 @@ namespace PersonalGPATrackerTests
             Assert.That(courseListPageTitle, Is.EqualTo("Course List and GPA - My ASP.NET Application"));
 
             var couseListRowsCount = GPATrackerCoursePage.CourseListRowsCount;
-
-            // 1st row is used for table heading
             Assert.That(couseListRowsCount, Is.EqualTo(1));
         }
 
@@ -190,8 +190,6 @@ namespace PersonalGPATrackerTests
         public void GivenIViewEmptyCourseList()
         {
             var couseListRowsCount = GPATrackerCoursePage.CourseListRowsCount;
-
-            // 1st row is used for table heading
             Assert.That(couseListRowsCount, Is.EqualTo(1));
         }
 
@@ -283,9 +281,7 @@ namespace PersonalGPATrackerTests
         [Given]
         public void GivenCheckTheCourseInTheList()
         {
-            var couseListRowsCount = GPATrackerCoursePage.CourseListRowsCount;
-
-            // 1st row is used for table heading
+            var couseListRowsCount = GPATrackerCoursePage.CourseListRowsCount;            
             Assert.That(couseListRowsCount, Is.EqualTo(2));
 
             var addedCourseCode = GPATrackerCoursePage.AddedCourseCode;

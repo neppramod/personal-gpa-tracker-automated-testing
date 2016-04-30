@@ -111,6 +111,62 @@ namespace PersonalGPATracker.WebDriverFramework
             }
         }
 
+        public static double TotalQualityPoints
+        {
+            get
+            {
+                var qualityPointElements = _page.FindElements(By.CssSelector("body > div.container.body-content > table > tbody > tr > td:nth-child(6)"));
+                double totalQualityPoints = 0.0;
+
+                foreach (var qualityPointElement in qualityPointElements)
+                {
+                    totalQualityPoints += Double.Parse(qualityPointElement.Text);
+                }
+
+                return totalQualityPoints;
+            }
+        }
+        public static int TotalCreditHours
+        {
+            get
+            {
+                var creditHourElements = _page.FindElements(By.CssSelector("body > div.container.body-content > table > tbody > tr > td:nth-child(3)"));
+                int totalCreditHours = 0;
+
+                foreach (var creditHoursElement in creditHourElements)
+                {
+                    totalCreditHours += Int32.Parse(creditHoursElement.Text);
+                }
+
+                return totalCreditHours;
+            }
+        }
+
+        public static double TotalGradePoints
+        {
+            get
+            {
+                var gradePointElements = _page.FindElements(By.CssSelector("body > div.container.body-content > table > tbody > tr > td:nth-child(5)"));
+                double totalGradePoints = 0.0;
+
+                foreach (var gradePointElement in gradePointElements)
+                {
+                    totalGradePoints += Double.Parse(gradePointElement.Text);
+                }
+
+                return totalGradePoints;
+            }
+        }
+                
+        public static string RowDetailsOfACourse
+        {
+            get
+            {
+                var courseRowDetailElement = _page.FindElement(By.CssSelector("body > div.container.body-content > table > tbody > tr:nth-child(2)"));
+                return courseRowDetailElement.Text;                
+            }
+        }
+
         public static void ClickDeleteLink()
         {
             var deleteCourseLink = _page.FindElement(By.CssSelector(

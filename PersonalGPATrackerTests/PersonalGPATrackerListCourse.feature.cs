@@ -86,7 +86,7 @@ this.FeatureBackground();
 #line 12
  testRunner.Given("I have added a new course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 13
- testRunner.Then("the total GPA should be greater than Zero", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the total GPA should be calculated using quality points", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -108,6 +108,25 @@ this.FeatureBackground();
  testRunner.When("I issue the Details link in one course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 19
  testRunner.Then("the page should go to Details page of that Course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("View row of an added course")]
+        [NUnit.Framework.CategoryAttribute("View_Content_Flow")]
+        public virtual void ViewRowOfAnAddedCourse()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("View row of an added course", new string[] {
+                        "View_Content_Flow"});
+#line 22
+this.ScenarioSetup(scenarioInfo);
+#line 7
+this.FeatureBackground();
+#line 23
+ testRunner.Given("I have added a new course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 24
+ testRunner.Then("course should be added to the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

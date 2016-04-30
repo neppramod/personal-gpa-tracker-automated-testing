@@ -35,6 +35,13 @@ namespace PersonalGPATracker.TestingFramework
 
         public static object DetailsOfACourse { get { return Chrome.DetailsOfACourse; } }
 
+        public static double TotalQualityPoints { get { return Chrome.TotalQualityPoints; } }
+        public static int TotalCreditHours { get { return Chrome.TotalCreditHours; } }
+
+        public static double TotalGradePoints { get { return Chrome.TotalGradePoints; } }
+
+        public static object RowDetailsOfACourse { get { return Chrome.RowDetailsOfACourse; } }
+
         public static void Initialize()
         {
             Chrome.Create();

@@ -4,7 +4,9 @@
 	I want to add a course
 
 Background:
-	Given I navigate to the Course Add page
+	Given I navigate to the Course Home page
+	And I view empty Course List
+	And I navigate to the Course Add page
 
 @Normal_Flow
 Scenario: Add a course
@@ -22,5 +24,5 @@ Scenario: Go back to course list without adding a course
 		And I have selected 3 as the Credit Hours
 		And I have selected B- as the Letter Grade
 	When I issue the Back to Course List link
-	Then the page should go to home page
+	Then the page should go to home page without adding the course to the list
 

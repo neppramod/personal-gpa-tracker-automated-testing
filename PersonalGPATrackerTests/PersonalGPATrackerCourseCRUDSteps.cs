@@ -62,6 +62,11 @@ namespace PersonalGPATrackerTests
             var courseListPageTitle = GPATrackerCoursePage.PageTitle;
             Assert.That(courseListPageTitle, Is.EqualTo("Course List and GPA - My ASP.NET Application"));
 
+            var couseListRowsCount = GPATrackerCoursePage.CourseListRowsCount;
+
+            // 1st row is used for table heading
+            Assert.That(couseListRowsCount, Is.EqualTo(2));
+
             var addedCourseCode = GPATrackerCoursePage.AddedCourseCode;
             Assert.That(addedCourseCode, Contains.Substring("CSCI3110"));
         }
@@ -71,13 +76,25 @@ namespace PersonalGPATrackerTests
         {
             GPATrackerCoursePage.IssueBackToCourseListLink();
         }
-        
+
+        [Then]
+        public void ThenThePageShouldGoToHomePageWithoutAddingTheCourseToTheList()
+        {
+            var courseListPageTitle = GPATrackerCoursePage.PageTitle;
+            Assert.That(courseListPageTitle, Is.EqualTo("Course List and GPA - My ASP.NET Application"));
+
+            var couseListRowsCount = GPATrackerCoursePage.CourseListRowsCount;            
+            Assert.That(couseListRowsCount, Is.EqualTo(1));
+        }
+
+                
         [Then]
         public void ThenThePageShouldGoToHomePage()
         {
             var courseListPageTitle = GPATrackerCoursePage.PageTitle;
             Assert.That(courseListPageTitle, Is.EqualTo("Course List and GPA - My ASP.NET Application"));
         }
+                
 
         [Then]
         public void ThenThePageShouldGoToAddCoursePageWithoutCourseUpdatedInTheList()
@@ -170,6 +187,16 @@ namespace PersonalGPATrackerTests
         }
 
         [Given]
+        public void GivenIViewEmptyCourseList()
+        {
+            var couseListRowsCount = GPATrackerCoursePage.CourseListRowsCount;
+
+            // 1st row is used for table heading
+            Assert.That(couseListRowsCount, Is.EqualTo(1));
+        }
+
+
+        [Given]
         public void GivenIHaveAddedANewCourse()
         {
             // Although the code is similar to GivenISetupACourseSeed, this is a different functionality
@@ -207,14 +234,13 @@ namespace PersonalGPATrackerTests
             GPATrackerCoursePage.IssueAddCourseMenuLink();
         }
 
-        /*
+        
         [Then]
         public void ThenThePageShouldGoToAddCoursePage()
         {
             var courseAddPageTitle = GPATrackerCoursePage.PageTitle;
             Assert.That(courseAddPageTitle, Is.EqualTo("Add New Course - My ASP.NET Application"));
-        }
-        */
+        }        
 
         [When]
         public void WhenIIssueTheDeleteLink()

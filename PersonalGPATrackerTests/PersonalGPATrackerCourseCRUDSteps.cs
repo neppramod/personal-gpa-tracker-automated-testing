@@ -174,5 +174,55 @@ namespace PersonalGPATrackerTests
             Assert.That(courseDetailsPageTitle, Is.EqualTo("Details of course: CSCI3110 - My ASP.NET Application"));
         }
 
+        [When]
+        public void WhenIIssueTheAddCourseMenuCommand()
+        {
+            GPATrackerCoursePage.IssueAddCourseMenuLink();
+        }
+
+        [Then]
+        public void ThenThePageShouldGoToAddCoursePage()
+        {
+            var courseAddPageTitle = GPATrackerCoursePage.PageTitle;
+            Assert.That(courseAddPageTitle, Is.EqualTo("Add New Course - My ASP.NET Application"));
+        }
+
+        [When]
+        public void WhenIIssueTheDeleteLink()
+        {
+            GPATrackerCoursePage.IssueDeleteLink();
+        }
+
+        [Then]
+        public void ThenThePageShouldGoToCourseDeletePage()
+        {
+            var deleteCoursePageTitle = GPATrackerCoursePage.PageTitle;
+            Assert.That(deleteCoursePageTitle, Is.EqualTo("Add New Course - My ASP.NET Application"));
+        }
+
+        [When]
+        public void WhenIIssuePersonalGPATrackerMenuCommand()
+        {
+            GPATrackerCoursePage.IssuePersonalGPATrackerMenuCommand();
+        }
+
+        [When]
+        public void WhenIIssueHomeMenuCommand()
+        {
+            GPATrackerCoursePage.IssueHomeMenuCommand();
+        }
+
+        [When]
+        public void WhenIIssueUserSNameCommand()
+        {
+            GPATrackerCoursePage.IssueUserSNameCommand();
+        }
+
+        [Then]
+        public void ThenThePageShouldRemainInCourseHomePage()
+        {
+            var courseListPageTitle = GPATrackerCoursePage.PageTitle;
+            Assert.That(courseListPageTitle, Is.EqualTo("Course List and GPA - My ASP.NET Application"));
+        }
     }
 }

@@ -69,6 +69,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PersonalGPATrackerListCourse.feature</DependentUpon>
     </Compile>
+    <Compile Include="PersonalGPATrackerTitleBar.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PersonalGPATrackerTitleBar.feature</DependentUpon>
+    </Compile>
     <Compile Include="PersonalGPATrackerViewCourse.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -94,6 +99,10 @@
     <None Include="PersonalGPATrackerListCourse.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>PersonalGPATrackerListCourse.feature.cs</LastGenOutput>
+    </None>
+    <None Include="PersonalGPATrackerTitleBar.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PersonalGPATrackerTitleBar.feature.cs</LastGenOutput>
     </None>
     <None Include="PersonalGPATrackerViewCourse.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

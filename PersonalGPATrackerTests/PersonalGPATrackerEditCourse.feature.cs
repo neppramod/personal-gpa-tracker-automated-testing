@@ -99,6 +99,33 @@ this.FeatureBackground();
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Go to add without updating a course")]
+        [NUnit.Framework.CategoryAttribute("Alternative_Flow")]
+        public virtual void GoToAddWithoutUpdatingACourse()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Go to add without updating a course", new string[] {
+                        "Alternative_Flow"});
+#line 20
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
+#line 21
+ testRunner.Given("I have entered CSCI3110 as the Code", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 22
+  testRunner.And("I have entered Advanced Web Design and Development as the Title", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 23
+  testRunner.And("I have selected 3 as the Credit Hours", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 24
+  testRunner.And("I have selected B- as the Letter Grade", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 25
+ testRunner.When("I issue the Add Course menu command", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 26
+ testRunner.Then("the page should go to add course page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

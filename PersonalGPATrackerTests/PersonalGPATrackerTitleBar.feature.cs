@@ -18,21 +18,21 @@ namespace PersonalGPATrackerTests
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.0.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("PersonalGPATrackerViewCourse")]
-    public partial class PersonalGPATrackerViewCourseFeature
+    [NUnit.Framework.DescriptionAttribute("PersonalGPATrackerTitleBar")]
+    public partial class PersonalGPATrackerTitleBarFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "PersonalGPATrackerViewCourse.feature"
+#line 1 "PersonalGPATrackerTitleBar.feature"
 #line hidden
         
         [NUnit.Framework.TestFixtureSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "PersonalGPATrackerViewCourse", "\tIn order to find details of a course\r\n\tAs a CS student\r\n\tI want to view a course" +
-                    "", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "PersonalGPATrackerTitleBar", "\tIn order to calculate GPA\r\n\tAs a CS student\r\n\tI want to navigate to various page" +
+                    "s of the web site", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -68,46 +68,48 @@ namespace PersonalGPATrackerTests
         {
 #line 6
 #line 7
- testRunner.Given("I setup a course seed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 8
- testRunner.And("I navigate to the Course View page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Given("I navigate to the Course Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("View a course")]
+        [NUnit.Framework.DescriptionAttribute("Go to add course page")]
         [NUnit.Framework.CategoryAttribute("Normal_Flow")]
-        public virtual void ViewACourse()
+        public virtual void GoToAddCoursePage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("View a course", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Go to add course page", new string[] {
                         "Normal_Flow"});
-#line 11
+#line 10
 this.ScenarioSetup(scenarioInfo);
 #line 6
 this.FeatureBackground();
+#line 11
+ testRunner.When("I issue the Add Course menu command", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 12
- testRunner.When("I issue the Back to Course List link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 13
- testRunner.Then("the page should go to home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the page should go to add course page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("View a delete page")]
+        [NUnit.Framework.DescriptionAttribute("Remain in home page")]
         [NUnit.Framework.CategoryAttribute("Alternative_Flow")]
-        public virtual void ViewADeletePage()
+        public virtual void RemainInHomePage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("View a delete page", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Remain in home page", new string[] {
                         "Alternative_Flow"});
-#line 16
+#line 15
 this.ScenarioSetup(scenarioInfo);
 #line 6
 this.FeatureBackground();
+#line 16
+ testRunner.When("I issue Personal GPA Tracker menu command", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 17
- testRunner.When("I issue the Delete link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I issue Home menu command", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 18
- testRunner.Then("the page should go to course delete page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("I issue User\'s name command", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 19
+ testRunner.Then("the page should remain in Course Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

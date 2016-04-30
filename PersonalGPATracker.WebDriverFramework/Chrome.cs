@@ -86,7 +86,42 @@ namespace PersonalGPATracker.WebDriverFramework
                 return Convert.ToDouble(selectedSubText);                
             }
         }
-        
+
+        public static void ClickDeleteLink()
+        {
+            var deleteCourseLink = _page.FindElement(By.CssSelector(
+                @"body > div.container.body-content > p > a:nth-child(2)"));
+            deleteCourseLink.Click();
+        }
+
+        public static void ClickHomeMenuCommand()
+        {
+            var homeMenuCommand = _page.FindElement(By.CssSelector(
+                @"body > div.navbar.navbar-inverse.navbar-fixed-top > div > div.navbar-collapse.collapse > ul > li:nth-child(1) > a"));
+            homeMenuCommand.Click();
+        }
+
+        public static void ClickUserSNameCommand()
+        {
+            var usersNameCommand = _page.FindElement(By.CssSelector(
+                @"body > div.navbar.navbar-inverse.navbar-fixed-top > div > div.navbar-collapse.collapse > ul > li:nth-child(3) > a"));
+            usersNameCommand.Click();
+        }
+
+        public static void ClickPersonalGPATrackerMenuCommand()
+        {
+            var personalGPATrackerMenuCommand = _page.FindElement(By.CssSelector(
+                @"body > div.navbar.navbar-inverse.navbar-fixed-top > div > div.navbar-header > a"));
+            personalGPATrackerMenuCommand.Click();
+        }
+
+        public static void ClickAddCourseMenuLink()
+        {
+            var addCourseLink = _page.FindElement(By.CssSelector(
+                @"body > div.navbar.navbar-inverse.navbar-fixed-top > div > div.navbar-collapse.collapse > ul > li:nth-child(2) > a"));
+            addCourseLink.Click();
+        }
+
         public static void ClickDetailsLink()
         {
             var detailsLink = _page.FindElement(By.CssSelector(

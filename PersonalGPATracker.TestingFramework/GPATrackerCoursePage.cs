@@ -88,5 +88,30 @@ namespace PersonalGPATracker.TestingFramework
         {
             Chrome.ClickDetailsLink();
         }
+
+        public static void IssueAddCourseMenuLink()
+        {
+            Chrome.ClickAddCourseMenuLink();
+        }
+
+        public static void IssueDeleteLink()
+        {
+            Chrome.ClickDeleteLink();
+        }
+
+        public static void IssuePersonalGPATrackerMenuCommand()
+        {
+            Chrome.ClickPersonalGPATrackerMenuCommand();
+        }
+
+        public static void IssueHomeMenuCommand()
+        {
+            Chrome.ClickHomeMenuCommand();
+        }
+
+        public static void IssueUserSNameCommand()
+        {
+            Chrome.ClickUserSNameCommand();
+        }
     }
 }

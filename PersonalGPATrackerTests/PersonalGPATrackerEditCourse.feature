@@ -15,3 +15,13 @@ Scenario: Edit a course
 		And I have selected A- as the Letter Grade
 	When I issue the Update Course command
 	Then the page should go to home page and course updated in the list
+
+@Alternative_Flow
+Scenario: Go to add without updating a course
+	Given I have entered CSCI3110 as the Code
+		And I have entered Advanced Web Design and Development as the Title
+		And I have selected 3 as the Credit Hours
+		And I have selected B- as the Letter Grade
+	When I issue the Add Course menu command
+	Then the page should go to add course page
+

@@ -11,3 +11,8 @@ Background:
 Scenario: View a course	
 	When I issue the Back to Course List link
 	Then the page should go to home page
+
+@Alternative_Flow
+Scenario: View a delete page
+	When I issue the Delete link
+	Then the page should go to course delete page

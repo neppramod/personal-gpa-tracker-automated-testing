@@ -9,11 +9,13 @@ namespace PersonalGPATracker.TestingFramework
 {
     public static class GPATrackerCoursePage
     {
-        private const string AddUrl = "http://localhost:9090/Course/Add";
-        private const string EditUrl = "http://localhost:9090/Course/Edit/CSCI3110";
-        private const string ViewUrl = "http://localhost:9090/Course/Details/CSCI3110";
-        private const string DeleteUrl = "http://localhost:9090/Course/Delete/CSCI3110";
-        private const string HomeUrl = "http://localhost:9090/Home/Index";
+        private const string URL_PORT = "http://localhost:9090/";
+
+        private const string AddUrl = URL_PORT + "Course/Add";
+        private const string EditUrl = URL_PORT + "Course/Edit/CSCI3110";
+        private const string ViewUrl = URL_PORT + "Course/Details/CSCI3110";
+        private const string DeleteUrl = URL_PORT + "Course/Delete/CSCI3110";
+        private const string HomeUrl = URL_PORT + "Home/Index";
 
         public static string Code { set { Chrome.Code = value; } }
 

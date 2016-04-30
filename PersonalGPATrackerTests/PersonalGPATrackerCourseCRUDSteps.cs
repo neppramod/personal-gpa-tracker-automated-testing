@@ -118,6 +118,14 @@ namespace PersonalGPATrackerTests
         }
 
         [Given]
+        public void GivenIViewDetailsOfACourse()
+        {
+            var detailsOfACourse = GPATrackerCoursePage.DetailsOfACourse;            
+            Assert.That(detailsOfACourse, Is.EqualTo("CSCI3110|Advanced Web Design and Development|3|B-|"));
+        }
+
+
+        [Given]
         public void GivenINavigateToTheCourseDeletePage()
         {            
             GPATrackerCoursePage.GotoDelete();
@@ -134,6 +142,11 @@ namespace PersonalGPATrackerTests
         {
             var courseListPageTitle = GPATrackerCoursePage.PageTitle;
             Assert.That(courseListPageTitle, Is.EqualTo("Course List and GPA - My ASP.NET Application"));
+
+            var couseListRowsCount = GPATrackerCoursePage.CourseListRowsCount;
+
+            // 1st row is used for table heading
+            Assert.That(couseListRowsCount, Is.EqualTo(1));
         }
 
         [Given]
@@ -197,7 +210,7 @@ namespace PersonalGPATrackerTests
         public void ThenThePageShouldGoToCourseDeletePage()
         {
             var deleteCoursePageTitle = GPATrackerCoursePage.PageTitle;
-            Assert.That(deleteCoursePageTitle, Is.EqualTo("Add New Course - My ASP.NET Application"));
+            Assert.That(deleteCoursePageTitle, Is.EqualTo("Delete course :CSCI3110 - My ASP.NET Application"));
         }
 
         [When]
@@ -224,5 +237,18 @@ namespace PersonalGPATrackerTests
             var courseListPageTitle = GPATrackerCoursePage.PageTitle;
             Assert.That(courseListPageTitle, Is.EqualTo("Course List and GPA - My ASP.NET Application"));
         }
+
+        [Given]
+        public void GivenCheckTheCourseInTheList()
+        {
+            var couseListRowsCount = GPATrackerCoursePage.CourseListRowsCount;
+
+            // 1st row is used for table heading
+            Assert.That(couseListRowsCount, Is.EqualTo(2));
+
+            var addedCourseCode = GPATrackerCoursePage.AddedCourseCode;
+            Assert.That(addedCourseCode, Contains.Substring("CSCI3110"));
+        }
+
     }
 }

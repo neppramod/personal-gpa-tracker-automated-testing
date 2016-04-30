@@ -27,7 +27,11 @@ namespace PersonalGPATracker.TestingFramework
 
         public static object AddedCourseCode { get { return Chrome.AddedCourseCode; } }
 
-        public static double TotalGPA { get { return Chrome.TotalGPA; } }        
+        public static double TotalGPA { get { return Chrome.TotalGPA; } }
+
+        public static object CourseListRowsCount { get { return Chrome.CourseListRowsCount; } }
+
+        public static object DetailsOfACourse { get { return Chrome.DetailsOfACourse; } }
 
         public static void Initialize()
         {

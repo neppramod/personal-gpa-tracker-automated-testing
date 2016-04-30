@@ -5,6 +5,7 @@
 
 Background:
 	Given I setup a course seed
+	And check the course in the list	
 	And I navigate to the Course Delete page
 
 @Normal_Flow

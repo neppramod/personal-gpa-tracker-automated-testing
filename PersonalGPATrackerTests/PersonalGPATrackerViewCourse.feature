@@ -6,9 +6,10 @@
 Background:
 	Given I setup a course seed
 	And I navigate to the Course View page
+	And I view Details of a course
 
 @Normal_Flow
-Scenario: View a course	
+Scenario: Go to home after viewing a course
 	When I issue the Back to Course List link
 	Then the page should go to home page
 

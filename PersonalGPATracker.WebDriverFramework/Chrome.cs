@@ -87,6 +87,30 @@ namespace PersonalGPATracker.WebDriverFramework
             }
         }
 
+        public static int CourseListRowsCount
+        {
+            get
+            {
+                return _page.FindElements(By.CssSelector("body > div.container.body-content > table > tbody > tr")).Count;                                
+            }
+        }
+
+        public static object DetailsOfACourse
+        { 
+            get
+            {
+                var detailElements = _page.FindElements(By.CssSelector("body > div.container.body-content > div > dl > dd"));
+                var detailsOfACourse = "";
+
+                foreach (var dd in detailElements)
+                {
+                    detailsOfACourse += dd.Text + "|";
+                }
+
+                return detailsOfACourse;
+            }
+        }
+
         public static void ClickDeleteLink()
         {
             var deleteCourseLink = _page.FindElement(By.CssSelector(

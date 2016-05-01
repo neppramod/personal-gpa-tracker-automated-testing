@@ -8,7 +8,7 @@ namespace PersonalGPATrackerTests.step_classes
     [Binding]
     public class PersonalGPATrackerListCourseSteps
     {
-        // Setup and Teardown for the project.        
+        // Setup and Teardown for the whole project.        
         [Before]
         public static void Setup()
         {

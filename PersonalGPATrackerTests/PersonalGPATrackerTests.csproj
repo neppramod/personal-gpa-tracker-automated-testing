@@ -48,63 +48,68 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PersonalGPATrackerAddNewCourse.feature.cs">
+    <Compile Include="feature_files\PersonalGPATrackerAddNewCourse.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PersonalGPATrackerAddNewCourse.feature</DependentUpon>
     </Compile>
-    <Compile Include="PersonalGPATrackerCourseCRUDSteps.cs" />
-    <Compile Include="PersonalGPATrackerDeleteACourse.feature.cs">
+    <Compile Include="feature_files\PersonalGPATrackerDeleteACourse.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PersonalGPATrackerDeleteACourse.feature</DependentUpon>
     </Compile>
-    <Compile Include="PersonalGPATrackerEditCourse.feature.cs">
+    <Compile Include="feature_files\PersonalGPATrackerEditCourse.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PersonalGPATrackerEditCourse.feature</DependentUpon>
     </Compile>
-    <Compile Include="PersonalGPATrackerListCourse.feature.cs">
+    <Compile Include="feature_files\PersonalGPATrackerListCourse.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PersonalGPATrackerListCourse.feature</DependentUpon>
     </Compile>
-    <Compile Include="PersonalGPATrackerTitleBar.feature.cs">
+    <Compile Include="feature_files\PersonalGPATrackerTitleBar.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PersonalGPATrackerTitleBar.feature</DependentUpon>
     </Compile>
-    <Compile Include="PersonalGPATrackerViewCourse.feature.cs">
+    <Compile Include="feature_files\PersonalGPATrackerViewCourse.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PersonalGPATrackerViewCourse.feature</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="step_classes\PersonalGPATrackerAddNewCourseSteps.cs" />
+    <Compile Include="step_classes\PersonalGPATrackerDeleteACourseSteps.cs" />
+    <Compile Include="step_classes\PersonalGPATrackerEditCourseSteps.cs" />
+    <Compile Include="step_classes\PersonalGPATrackerListCourseSteps.cs" />
+    <Compile Include="step_classes\PersonalGPATrackerTitleBarSteps.cs" />
+    <Compile Include="step_classes\PersonalGPATrackerViewCourseSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <None Include="PersonalGPATrackerAddNewCourse.feature">
+    <None Include="feature_files\PersonalGPATrackerAddNewCourse.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>PersonalGPATrackerAddNewCourse.feature.cs</LastGenOutput>
     </None>
-    <None Include="PersonalGPATrackerDeleteACourse.feature">
+    <None Include="feature_files\PersonalGPATrackerDeleteACourse.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>PersonalGPATrackerDeleteACourse.feature.cs</LastGenOutput>
     </None>
-    <None Include="PersonalGPATrackerEditCourse.feature">
+    <None Include="feature_files\PersonalGPATrackerEditCourse.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>PersonalGPATrackerEditCourse.feature.cs</LastGenOutput>
     </None>
-    <None Include="PersonalGPATrackerListCourse.feature">
+    <None Include="feature_files\PersonalGPATrackerListCourse.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>PersonalGPATrackerListCourse.feature.cs</LastGenOutput>
     </None>
-    <None Include="PersonalGPATrackerTitleBar.feature">
+    <None Include="feature_files\PersonalGPATrackerTitleBar.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>PersonalGPATrackerTitleBar.feature.cs</LastGenOutput>
     </None>
-    <None Include="PersonalGPATrackerViewCourse.feature">
+    <None Include="feature_files\PersonalGPATrackerViewCourse.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>PersonalGPATrackerViewCourse.feature.cs</LastGenOutput>
     </None>
@@ -118,6 +123,7 @@
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

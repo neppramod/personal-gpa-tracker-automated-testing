@@ -25,9 +25,7 @@ namespace PersonalGPATracker.TestingFramework
 
         public static string LetterGrade { set { Chrome.LetterGrade = value; } }
 
-        public static object PageTitle { get { return Chrome.PageTitle; } }
-
-        public static object AddedCourseCode { get { return Chrome.AddedCourseCode; } }
+        public static object PageTitle { get { return Chrome.PageTitle; } }        
 
         public static double TotalGPA { get { return Chrome.TotalGPA; } }
 

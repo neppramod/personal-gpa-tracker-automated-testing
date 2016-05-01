@@ -66,16 +66,7 @@ namespace PersonalGPATracker.WebDriverFramework
             updateCourseButton.Click();
         }
 
-        public static object PageTitle { get { return _page.Title; } }
-
-        public static object AddedCourseCode
-        {
-            get
-            {            
-                var addedCourseElement = _page.FindElement(By.XPath("/html/body/div[2]/table/tbody/tr[2]"));
-                return addedCourseElement.Text;
-            }
-        }
+        public static object PageTitle { get { return _page.Title; } }        
 
         public static double TotalGPA
         {
@@ -231,7 +222,7 @@ namespace PersonalGPATracker.WebDriverFramework
 
         public static void Quit()
         {
-            Thread.Sleep(1000);
+            //Thread.Sleep(1000);
             _page.Dispose();
             _page.Quit();
         }

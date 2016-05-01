@@ -39,6 +39,18 @@ namespace PersonalGPATrackerTests.step_classes
             GPATrackerCoursePage.IssueAddCourseCommand();
         }
 
+        [Given]
+        public void GivenIHaveAddedOneMoreCourse()
+        {
+            GPATrackerCoursePage.GotoAdd();
+            GPATrackerCoursePage.Code = "CSCI3111";
+            GPATrackerCoursePage.Title = "Basic Web Design and Development";
+            GPATrackerCoursePage.CreditHours = "6";
+            GPATrackerCoursePage.LetterGrade = "A-";
+            GPATrackerCoursePage.IssueAddCourseCommand();
+        }
+
+
         [When]
         public void WhenIIssueTheDetailsLinkInOneCourse()
         {
@@ -53,10 +65,12 @@ namespace PersonalGPATrackerTests.step_classes
             var totalCreditHours = GPATrackerCoursePage.TotalCreditHours;
             var totalGradePoints = GPATrackerCoursePage.TotalGradePoints;
 
+            Assert.That(totalGradePoints, Is.EqualTo(6.4));
+            Assert.That(totalCreditHours, Is.EqualTo(9));
 
             // Being careful as to not fail the test based on floating point precision error
-            Assert.That(Math.Round(totalGPA, 2), Is.InRange(totalQualityPoints / totalCreditHours, 2.70));
-            Assert.That(Math.Round(totalQualityPoints, 2), Is.InRange(8.09, totalCreditHours * totalGradePoints));
+            Assert.That(Math.Round(totalQualityPoints, 2), Is.EqualTo(30.30));
+            Assert.That(Math.Round(totalGPA, 2), Is.EqualTo(Math.Round(totalQualityPoints / totalCreditHours, 2)));            
         }
 
         [Then]

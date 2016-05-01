@@ -9,7 +9,8 @@ Background:
 
 @Normal_Flow
 Scenario: Update Total GPA
-	Given I have added a new course	
+	Given I have added a new course
+	And I have added one more course	
 	Then the total GPA should be calculated using quality points
 
 @TakeAction_Flow

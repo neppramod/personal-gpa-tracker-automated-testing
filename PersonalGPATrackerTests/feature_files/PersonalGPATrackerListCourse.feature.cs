@@ -86,6 +86,8 @@ this.FeatureBackground();
 #line 12
  testRunner.Given("I have added a new course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 13
+ testRunner.And("I have added one more course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 14
  testRunner.Then("the total GPA should be calculated using quality points", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -98,15 +100,15 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("View Details of a course", new string[] {
                         "TakeAction_Flow"});
-#line 16
+#line 17
 this.ScenarioSetup(scenarioInfo);
 #line 7
 this.FeatureBackground();
-#line 17
- testRunner.Given("I have added a new course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 18
- testRunner.When("I issue the Details link in one course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given("I have added a new course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 19
+ testRunner.When("I issue the Details link in one course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 20
  testRunner.Then("the page should go to Details page of that Course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -119,13 +121,13 @@ this.FeatureBackground();
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("View row of an added course", new string[] {
                         "View_Content_Flow"});
-#line 22
+#line 23
 this.ScenarioSetup(scenarioInfo);
 #line 7
 this.FeatureBackground();
-#line 23
- testRunner.Given("I have added a new course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 24
+ testRunner.Given("I have added a new course", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 25
  testRunner.Then("course should be added to the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
